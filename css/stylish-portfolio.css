@@ -305,6 +305,10 @@ hr {
 
 /* About */
 
+#about .container-fluid {
+	padding: 0;
+}
+
 #explain {
 	padding: 0;
 }
