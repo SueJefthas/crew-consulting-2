@@ -480,6 +480,9 @@ footer {
 		display: block !important;
 	}
 	
+	p {
+		font-size: 16px;
+	}
 	
 	.focusText {
 		font-size: 1.8em;
