@@ -22,7 +22,7 @@ img {
 
 a {
 	text-decoration: none;
-	color: #9ee0e9;
+	color: #ffbf76;
 }
 
 /* Logo */
@@ -33,7 +33,7 @@ a {
 }
 
 #logo svg {
-	padding-top: 15px;
+	margin-top: 15px;
 }
 
 /* Logo animation */
@@ -77,12 +77,31 @@ a {
     /*position: relative;*/
     width: 100%;
     height: 100%;
-    background: url(../img/watering-6.jpg)  no-repeat center center fixed;
+    /*background: url(../img/bg-image.jpg)  no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
-    -o-background-size: cover;
+    -o-background-size: cover;*/
 }
+
+video#bgvid { 
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		min-width: 100%;
+		min-height: auto;
+		width: auto;
+		height: auto;
+		z-index: -100;
+		-ms-transform: translateX(-50%) translateY(-50%);
+		-moz-transform: translateX(-50%) translateY(-50%);
+		-webkit-transform: translateX(-50%) translateY(-50%);
+		transform: translateX(-50%) translateY(-50%);
+		background: url(polina.jpg) no-repeat;
+		background-size: cover; 
+	}
+
+	video { display: block; }
 
 /* Cover text blocks */
 
@@ -102,7 +121,7 @@ a {
     margin: 0;
     padding: 0;
 	font-size: 24px;
-	color: #9ee0e9;
+	color: #ffbf76;
 	font-weight: lighter !important;
 	font-family: "Bodoni MT";
 }
@@ -120,7 +139,7 @@ a {
 }
 
 .text-vertical-center h3 .focusText {
-	color: #9ee0e9;
+	color: #ffbf76;
 	font-family: "source-sans-pro","Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-weight: bold;
 }
@@ -204,7 +223,7 @@ a {
 }
 
 .icon-bar {
-	background-color: #000 !important;
+	background-color: #fff !important;
 }
 
 /* Navbar modal */
@@ -238,7 +257,7 @@ a {
 
 hr {
 	width: 30%;
-	border: 2px solid #9ee0e9; 
+	border: 2px solid #cb591f; 
 }
 
 .close {
@@ -255,7 +274,7 @@ hr {
 .btn-dark {
     border-radius: 0;
     color: #fff;
-    background-color: rgba(158,224,233,0.7);
+    background-color: rgba(203,89,31,0.7);
 }
 
 .text-vertical-center .btn-lg {
@@ -267,8 +286,8 @@ hr {
 .btn-dark:hover,
 .btn-dark:focus,
 .btn-dark:active {
-	color: #fff;
-	background-color: rgba(0, 0, 0, 0.7);
+	color: #333;
+	background-color: rgba(255, 191, 118, 0.7);
     
 }
 
@@ -294,7 +313,7 @@ hr {
 
 .expand {
 	vertical-align: middle;
-	background-color: #ccc;
+	background-color: #fff;
 	height: 100%;
 	margin-bottom: 20px;
 }
@@ -312,7 +331,7 @@ hr {
 
 .describe h3 {
 	padding: 0;
-	color: #000;
+	color: #cb591f;
 }
 
 .resources {
@@ -471,7 +490,7 @@ footer {
 	}
 	hr {
 		width: 30%;
-		border: 3px solid #9ee0e9; 
+		border: 3px solid #cb591f; 
 	}
 	
 	.expand {
@@ -541,13 +560,17 @@ footer {
 	
 	hr {
 		width: 30%;
-		border: 5px solid #9ee0e9; 
+		border: 5px solid #cb591f; 
 	}
 	
 	.expand {
 		margin-bottom: 0;
 	}
+	
+	.describe p {
+		font-size: 20px;
+		padding: 0;
+		color: #000;
+		line-height: 1.7em;
+	}
 }
-
-
-
