@@ -13,7 +13,7 @@ html, body {
 
 body {
     font-family: "source-sans-pro","Helvetica Neue",Helvetica,Arial,sans-serif;
-    background-color: #ccc;
+    background: #ccc url(../img/bg-image.jpg)  no-repeat center center fixed;
 }
 
 img {
