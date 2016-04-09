@@ -91,11 +91,11 @@ a {
 }
 
 .text-vertical-center {
-    /*display: table-cell;*/
+    /*display: table-row;*/
     text-align: center;
     vertical-align: middle;
 	background-color: rgba(0,0,0,0.4);
-	padding: 10px 5px;
+	/*padding: 10px 5px;*/
 }
 
 .text-vertical-center h1 {
@@ -114,7 +114,7 @@ a {
 
 .text-vertical-center h3 {
 	color: #fff;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: lighter !important;
 	font-family: "Bodoni MT";
 }
@@ -288,8 +288,9 @@ hr {
 /* About */
 
 #explain {
-	padding: 0;
+	background-color: #fff;
 }
+
 
 .expand {
 	vertical-align: middle;
@@ -547,4 +548,6 @@ footer {
 		margin-bottom: 0;
 	}
 }
+
+
 
