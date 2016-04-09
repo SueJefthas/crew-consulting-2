@@ -65,7 +65,7 @@ a {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   animation-name: bounceInUp;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 
 /* Cover image */
@@ -121,88 +121,69 @@ a {
 
 .text-vertical-center h3 .focusText {
 	color: #9ee0e9;
-	font-size: 24px;
-	 font-family: "source-sans-pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-family: "source-sans-pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: bold;
 }
 
 /* Cover text blocks animation */
 
-@keyframes disappear {
-  from {
-	  opacity: 1;
-  }
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }  
 
-  to {
-	  opacity: 0;
-  }
-}
-
-@-webkit-keyframes disappear {
-  from {
-	  opacity: 1;
-  }
-
-  to {
-	  opacity: 0;
+  100% {
+    opacity: 1;
   }
 }
 
-@keyframes visible {
-  from {
-	  opacity: 0;
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
 
-  to {
-	  opacity: 1;
-  }
-}
-
-@-webkit-keyframes visible {
-  from {
-	  opacity: 0;
-  }
-
-  to {
-	  opacity: 1;
+  100% {
+    opacity: 1;
   }
 }
 
-.visible {
+.fadeIn {
 	 opacity: 0;
-	-webkit-animation: visible 3s;
-	 animation: visible 3s;
+	-webkit-animation: fadeIn 3s;
+	 animation: fadeIn 3s;
 	-webkit-animation-fill-mode: forwards;
 	animation-fill-mode: forwards;
 }
 
-.visibleOne {
- opacity: 0;
-	-webkit-animation: visible 5s, disappear 10s;
-	 animation: visible 5s, disappear 10s;
-	animation-delay: 5s;
-	animation-timing-function: linear;
-	-webkit-animation-fill-mode: forwards;
-	animation-fill-mode: forwards;
+.fadeInOne {
+	opacity: 0;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  animation-delay: 1s;
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+  animation-iteration-count: 2;
+    animation-direction: alternate;
 }
 
-.visibleTwo {
+.fadeInTwo {
+	animation-delay: 6s;
+}
+
+.fadeInThree {
+	animation-delay: 7s;
+}
+
+.fadeInFour {
+	animation-delay: 8s;
+}
+
+.fadeInFive {
+	animation-delay: 9s;
+}
+
+.fadeInSix {
 	animation-delay: 10s;
-}
-
-.visibleThree {
-	animation-delay: 11s;
-}
-
-.visibleFour {
-	animation-delay: 12s;
-}
-
-.visibleFive {
-	animation-delay: 13s;
-}
-
-.visibleSix {
-	animation-delay: 15s;
 }
 
 /* Navbar */
@@ -219,6 +200,7 @@ a {
     top: 0;
     right: 0;
 	display: block !important;
+	margin-right: 25px;
 }
 
 .icon-bar {
@@ -250,13 +232,13 @@ a {
 
 .modal-nav-body ul li {
 	text-align: center;
-	font-size: 300%;
+	font-size: 150%;
 	padding: 8px;
 }
 
 hr {
 	width: 30%;
-	border: 5px solid #9ee0e9; 
+	border: 2px solid #9ee0e9; 
 }
 
 .close {
@@ -277,8 +259,8 @@ hr {
 }
 
 .text-vertical-center .btn-lg {
-	padding: 15px 25px;
-	font-size: 24px;
+	padding: 5px 15px;
+	font-size: 18px;
 
 }
 
@@ -305,10 +287,6 @@ hr {
 
 /* About */
 
-#about .container-fluid {
-	padding: 0;
-}
-
 #explain {
 	padding: 0;
 }
@@ -322,12 +300,13 @@ hr {
 
 .describe {
 	height: 100%;
-	padding: 15px 15px 0 30px;
+	padding: 5px 15px 5px 30px;
 }
 
 .describe p {
 	padding: 0;
-	color: #888;
+	color: #000;
+	line-height: 1.7em;
 }
 
 .describe h3 {
@@ -428,8 +407,12 @@ footer {
 	}
 	
 	.text-vertical-center h3 {
-	font-size: 20px;
-}
+		font-size: 20px;
+	}
+	
+	.modal-nav-body {
+		margin-top: 50px; 
+	}
 	
 }
 
@@ -472,33 +455,30 @@ footer {
 		font-size: 30px;
 	}
 	
-	.text-vertical-center h3 .focusText {
-		font-size: 45px;
+	.text-vertical-center .btn-lg {
+		padding: 15px 25px;
+		font-size: 24px;
+
 	}
 	
 	.navbar-toggle {
 		display: block !important;
 	}
 	
-	p {
-		font-size: 16px;
+	.modal-nav-body ul li {
+		font-size: 200%;
 	}
-	
-	.focusText {
-		font-size: 1.8em;
-		font-weight: 700;
+	hr {
+		width: 30%;
+		border: 3px solid #9ee0e9; 
 	}
 	
 	.expand {
 		margin-bottom: 20px;
 	}
 	
-	.about h3 {
-		font-size: 2.5em;
-	}
-	
 	.describe p {
-		padding: 30px;
+		padding: 15px;
 		margin: 0;
 	}
 }
@@ -547,10 +527,20 @@ footer {
 	.text-vertical-center h3 {
 		padding-bottom: 15px;
 	}
+	
+	.text-vertical-center .btn-lg {
+		padding: 15px 25px;
+		font-size: 24px;
 
-	.focusText {
-		font-weight: 700;
-		font-size: 1.8em !important;
+	}
+	
+	.modal-nav-body ul li {
+		font-size: 300%;
+	}
+	
+	hr {
+		width: 30%;
+		border: 5px solid #9ee0e9; 
 	}
 	
 	.expand {
